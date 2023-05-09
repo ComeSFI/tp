@@ -35,8 +35,11 @@ services:
       - "5432:5432"
     hostname: postgres
     volumes:
-      - './pgdata:/var/lib/postgresql/data' # persist data https://stackoverflow.com/a/41650891/3535853
+      - "./pgdata:/var/lib/postgresql/data:Z" # persist data https://stackoverflow.com/a/41650891/3535853
     environment:
       POSTGRES_USER: user
       POSTGRES_DB: metabase
       POSTGRES_PASSWORD: password
+
+volumes:
+  postgres-vol:
