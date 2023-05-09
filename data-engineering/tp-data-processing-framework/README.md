@@ -10,6 +10,16 @@ Some questions :
 * With which languages can you use Spark ? 
 * Which data sources or data sinks can Spark work with ? 
 
+1: RDD, Resilient Distributed Datasets, and Datasets are two of the APIs of Spark. An RDD is an immutable distributed collection of data, which is partitioned across several machines that in parallel operate on the data. Two types of operations are provided by the RDD API: transformation, operations creating a new RDD based on an already existing one, and actions, operations returning raw values from the actual dataset (non-RDD value).
+
+2: Building on the RDD API, Spark Dataset API is a newer API that offers a more efficient way of working with both structured and semi-structured data. It is a higher-level API that is more like SQL with some similar operations like join(), groupBy() and select() for example.
+
+3: Spark supports several programming languages including Scala, Java, Python, and R.
+
+4: Spark is capable of working with various data sources and sinks, thanks to its unified API. This makes it highly adaptable and versatile. Some of the data sources that Spark can work with include JSON files, CSV files, Parquet files, Microsoft Excel, Apache Kafka, and Hadoop Distributed File System (HDFS).
+
+Spark's unified API also enables it to work with a variety of data sinks, such as relational databases, NoSQL databases, data warehouses, cloud storage, local file systems and directories, and Hadoop Distributed File System (HDFS).
+
 ### Analyse data with Apache Spark and Scala 
 One engineering team of your company created for you a TV News data stored as JSON inside the folder `data-news-json/`.
 

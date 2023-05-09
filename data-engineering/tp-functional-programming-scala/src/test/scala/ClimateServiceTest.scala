@@ -10,7 +10,8 @@ class ClimateServiceTest extends AnyFunSuite {
 
   test("isClimateRelated - climate related words should return true") {
     assert(ClimateService.isClimateRelated("climate change") == true)
-    assert(ClimateService.isClimateRelated("IPCC"))
+    assert(ClimateService.isClimateRelated("IPCC")==true)
+    assert(ClimateService.isClimateRelated("siuu")==false)
   }
 
   //@TODO
